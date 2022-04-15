@@ -5,6 +5,9 @@ The data for this project is available through NYC Open Data.
 
 The source page used was: https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Current-Year-To-Date-/5uac-w243
 
+A copy of the "NYPD Complaints Incident Level Data Footnotes" was downloaded on 2022-04-13 and was posted here as "NYPD_Complaint_Incident_Level_Data_Footnotes.pdf"
+
+
 ## Sections within the Notebook
 1. Load Data
 2. Uniqueness and Duplication
