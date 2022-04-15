@@ -12,3 +12,10 @@ The source page used was: https://data.cityofnewyork.us/Public-Safety/NYPD-Compl
 4. Data Types and Consistency
 5. Univariant Visuals
 6. Correlation
+
+## Issues to Resolve
+* Time value increments too fine
+  * Action: Bin times into intervals of 15 minutes
+* Time and Date values don't get passed into correlation matrix
+  * Action: Change time to hours since beginning of day (0.00, 0.25, ..., 23.50, 23.75)
+  * Action: Change date to day since beginning of year (1, 2, ..., 364, 365)
