@@ -8,15 +8,16 @@ The source page used was: https://data.cityofnewyork.us/Public-Safety/NYPD-Compl
 A copy of the "NYPD Complaints Incident Level Data Footnotes" was downloaded on 2022-04-13 and was posted in this repository as "NYPD_Complaint_Incident_Level_Data_Footnotes.pdf"
 
 
-## Sections within the Notebook
+## Outline of the Notebook
 1. Load Data
-2. Uniqueness and Duplication
-3. Eliminating Unnecessary Columns
-4. Data Types and Consistency
-5. Univariant Visuals
-6. Correlation
+1.2.  Identify the Target
+3. Uniqueness and Duplication
+4. Eliminating Unnecessary Columns
+5. Data Types and Consistency
+6. Univariant Visuals
+7. Correlation
 
-## Issues to Resolve
+## Issues with Data and Resolution Action
 * Time value increments too fine
   * Action: Bin times into intervals of 15 minutes
 * Time and Date values don't get passed into correlation matrix
