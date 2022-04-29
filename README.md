@@ -75,3 +75,30 @@ This would indicate that the division of resources and crime prevention measures
   ![NY Crime by Premise Type](https://user-images.githubusercontent.com/99386257/165870003-4be8d00b-5313-49a7-ab29-6bc0a3d90f97.png)
 
 These very different types of settings would require very different approaches, as one type is a very public location and the other type is a very private location. How these are distributed throughout the city may entail different solutions within different precincts.
+
+## Models 
+This is a classification analysis with 3 target values:violation, misdemeanor, felony)
+
+The models I will run will be be a Random Forest, a K-Nearest Neighbors, and a Logistic Regression. I will also run a baseline model to serve as a minium standard.
+
+## Model Comparison
+
+The results of the models are seen in the following confusion matrices. The results are normalized so that each row in one matrix has a sum of 1.
+
+![NY Crime Confusion Matrics](https://user-images.githubusercontent.com/99386257/166010110-0a7b61be-d268-4c40-a5e4-45f7e00412db.png)
+
+None of the models perform very well.
+
+Obviously, the Baseline model is not expected to perform well. It predicts everthing should be a misdemeanor. The Linear Regression is barely better. Regardless of what the actual severity level is, the model will misdemeanor over 90% of the time. This is an abject failure for the violation and felony cases.
+
+The Random Forest and K-Nearest Neighbors preformed significantly better, but still predict the severity level as misdemeanor most of the time. Their true positive rates for the violation case is two orders of magnitude better than the Logistic Regression. Their true positive rates for the felony case also improved over the Logistic Regression, with 4.3 times better for the Random Forest and 3.3 times better for the K-Nearest Neighbors.
+
+However, the Random Forest and K-Nearest Neighbors still predict misdeameanor most of the time.
+
+I am choosing best model is the Random Forest as it has the best true positive rates for violations and felonies. Additionally, since felonies are the most dangerous severity level, it may be more import to predict true positives for this case than the other two.
+
+Due to the not stellar performance of any of these models, I am concluding that even the best of them is not particularly useful by itself. Two strong reasons may explain why.
+1. The models have insufficient data. There may be other factors that are not included in police reports that may affect criminal behavior. Such factors may include variables such as weather, state of the economy, and distribution of socio-economic classes of the various neighborhoods within a precinct. These types of information would need to be collected from another source.
+2. The COVID-19 pandemic years are uniquely different than most years. As social distancing rules, mask mandates, and anxieties about COVID-19 changed throughout the year, there may have been an disruptive effect that lowers the predictability of any models applies to this problem.
+
+There does exist a third explanation, in which there is an inherent limit to how well a model has solved the crime prediction problem. I don't believe the models used here have exhausted enough avenues of improvement to have reached that limit.
