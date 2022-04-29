@@ -46,6 +46,10 @@ Reasons for dropping the remaining columns are as follows:
 * All suspect and victim demographics
   * over 40% of the suspect data is unknown
   * likely entangled with population demographics of precincts
+### Creating Columns
+There is information that is not explictly presented anywhere, but does exist within the data that is already present. Some of it can be made into their own columns so they can be examined seperately from the data it was hidden within.
+* Day of the week
+  * This 7 day cycle affects social patterns
 
 ## Issues with Data and Resolution Action
 * Time value increments too fine
@@ -58,13 +62,16 @@ Reasons for dropping the remaining columns are as follows:
 Examing some of the general relationships of the data, some general characteristics can be seen:
 
 * All severity levels of crime rose throughout the year. But there is a noticable decrease during the final two weeks, which might be attributatable to the winter holiday season.
-![NY Crime by Day of Year 2021](https://user-images.githubusercontent.com/99386257/165869423-b750a350-7a4e-4cf0-93ea-01824b298d8b.png)
-This indicates that the time of year is potentially important for determining when crime prevention efforts should be increased. There is a big caveat, however. The year 2021 was a pandemic year, so the yearly trend in crime may not be typical.
+  ![NY Crime by Day of Year 2021](https://user-images.githubusercontent.com/99386257/165869423-b750a350-7a4e-4cf0-93ea-01824b298d8b.png)
+
+This indicates that the time of year is potentially important for determining when crime prevention efforts should be increased. There is a big caveat, however. The year 2021 was a pandemic year, so the yearly trend in crime may not be typical. A follow-up project should examine other years to make a determination.
 
 * All precincts have similar ratios of crime severities.
-![NY Crime Ratios in Precincts](https://user-images.githubusercontent.com/99386257/165869907-342d0a33-aef6-4278-aa58-7ff32fef23c9.png)
-This would indicate that the division of resources and crime prevention measures will likely be distributed similarly among precincts. The specifics of what these might be will more likely be dependent on the individual community and zoning characteristcs of the precincts.
+  ![NY Crime Ratios in Precincts](https://user-images.githubusercontent.com/99386257/165869907-342d0a33-aef6-4278-aa58-7ff32fef23c9.png)
 
-* Majority of crimes happen either in the streets or in residences.
-![NY Crime by Premise Type](https://user-images.githubusercontent.com/99386257/165870003-4be8d00b-5313-49a7-ab29-6bc0a3d90f97.png)
+This would indicate that the division of resources and crime prevention measures might be distributed similarly among precincts. The specifics of what these might be will more likely be dependent on the individual community and zoning characteristcs of the precincts (this is why premise type descriptions are included in this project).
 
+* Majority of crimes happen either in streets or in residences.
+  ![NY Crime by Premise Type](https://user-images.githubusercontent.com/99386257/165870003-4be8d00b-5313-49a7-ab29-6bc0a3d90f97.png)
+
+These very different types of settings would require very different approaches, as one type is a very public location and the other type is a very private location. How these are distributed throughout the city may entail different solutions within different precincts.
