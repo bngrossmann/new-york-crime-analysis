@@ -36,21 +36,21 @@ Since there are 36 columns, I will indentify here the columns that will be used 
 #### Dropping Columns
 Reasons for dropping the remaining columns are as follows:
 * Location Information
-  * too general or too specific
-  * redundant information using different coordinate systems
+  * Too general or too specific
+  * Redundant information using different coordinate systems
 * Times and Dates
-  * times and dates after crimes end or are reported inherently happen after the crime 
+  * Times and dates after crimes end or are reported inherently happen after the crime 
 * Special Codes
-  * greater details about individual reports
-  * redundant inforamtion by assigning numerical codes to each description
+  * Greater details about individual reports
+  * Redundant inforamtion by assigning numerical codes to each description
 * All suspect and victim demographics
-  * over 40% of the suspect data is unknown
-  * likely entangled with population demographics of precincts
+  * Over 40% of the suspect data is unknown
+  * Likely entangled with population demographics of precincts
 ### Creating Columns
 There is information that is not explictly presented anywhere, but does exist within the data that is already present. Some of it can be made into their own columns so they can be examined seperately from the data it was hidden within.
 * Day of the week
+  * This can be extracted from the date
   * This 7 day cycle affects social patterns
-
 ## Issues with Data and Resolution Action
 * Time value increments too fine
   * Action: Bin times into intervals of 15 minutes
